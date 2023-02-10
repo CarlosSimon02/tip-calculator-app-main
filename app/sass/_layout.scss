@@ -1,0 +1,208 @@
+.main-container {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+
+    @media (min-width:$breakpoint-tablet) {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%,0);
+        width: 500px;
+        margin-bottom: 50px;
+    }
+
+    @media (min-width:$breakpoint-desktop) {
+        position: absolute;
+        width: 920px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    &__logo {
+        text-align: center;
+        margin: 0 0 50px 0;
+    }
+
+    & input, & .choice-label, & button {
+        display: block;
+        width: 100%;
+        height: 48px;
+        border: 0;
+        line-height: 48px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .calc {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-white);
+        padding: 32px;
+        border-radius: 24px 24px 0 0;
+        gap: 32px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.176);
+
+
+        @media (min-width: $breakpoint-tablet) {
+            border-radius: 24px;
+        }
+
+        @media (min-width: $breakpoint-desktop)
+        {
+            flex-direction: row;
+            gap: 48px;
+            height: 481px;
+        }
+    
+        &__input {
+            display: flex;
+            flex-direction: column;
+            gap: 38px;
+            
+            @media (min-width: $breakpoint-desktop) {
+                flex: 1;
+                justify-content: space-around;
+                gap: 0;
+            }
+    
+            & *::placeholder {
+                color: var(--color-very-dark-cyan);
+            }
+        
+            & input {
+                background-color: var(--color-very-light-grayish-cyan);
+                color: var(--color-very-dark-cyan);
+        
+                &:focus {
+                    outline: 2px solid var(--color-strong-cyan);
+                }
+            }
+
+            &__bill-textbox {
+                background: url("/images/icon-dollar.svg") no-repeat scroll 14px 14px;
+                background-size: 14px auto;
+            }
+
+            &__num-textbox {
+                background: url("/images/icon-person.svg") no-repeat scroll 14px 14px;
+                background-size: 14px auto;
+            }
+
+            & > div > input {
+                text-align: right;
+                padding: 0 18px;
+            }
+        
+            & .label {
+                margin-bottom: 8px;
+                color: var(--color-dark-grayish-cyan);
+            }
+        
+            & input, & .choice-label {
+                font-size: 1.5rem;
+            }
+        
+            &__select-tip {
+                &__container {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    text-align: center;
+                    gap: 16px;
+                    
+                    @media (min-width: $breakpoint-desktop) {
+                        grid-template-columns: 1fr 1fr 1fr;
+                        gap: 12px;
+                    }
+                }
+
+        
+                &__choice {
+                    position: fixed;
+                    opacity: 0;
+                    pointer-events: none;
+        
+                    &:checked+label {
+                        background-color: var(--color-strong-cyan);
+                        color: var(--color-very-dark-cyan);
+                    }
+                }
+        
+                &__label {
+                    background-color: var(--color-very-dark-cyan);
+                    color: var(--color-white);
+                    width: 100%;
+
+                    & > input{
+                        text-align: center;
+                        padding: 0 7px;
+                    }
+                }
+            }
+        }
+    
+        &__output {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--color-very-dark-cyan);
+            padding: 38px 24px 24px;
+            height: 257px;
+            border-radius: 24px;
+            gap: 15px;
+            align-content: center;
+
+            @media (min-width: $breakpoint-desktop)
+            {
+                flex: 1;
+                gap: 25px;
+                height: auto;
+                padding: 50px 40px 40px;
+            }
+            
+            & div {
+                display: flex;
+                align-items: center;
+        
+                & p {
+                    color: var(--color-white);
+                    flex: 1;
+                    line-height: 1.2rem;
+                    font-size: 1rem;
+        
+                    & span {
+                        color: var(--color-grayish-cyan);
+                        font-size: 0.8125rem;
+                    }
+                }
+        
+                & h1 {
+                    font-size: 2rem;
+                    color: var(--color-strong-cyan);
+                    text-align: right;
+
+                    @media (min-width: $breakpoint-desktop) {
+                        font-size: 3rem;
+                    }
+                }
+            }
+        
+            & button {
+                margin-top: auto;
+                font-size: 1.25rem;
+                background-color: var(--color-strong-cyan);
+                color: var(--color-very-dark-cyan); 
+
+                &:hover {
+                    background-color: hsl(172, 100%, 68%);
+                }
+
+                &:active {
+                    background-color: hsl(172, 100%, 96%);
+                }
+
+
+            }
+        }
+    }
+}

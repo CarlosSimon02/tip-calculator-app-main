@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Tip calc__input__inputulator app</title>
+
+  <link rel="stylesheet" href="./dist/style.css" </head>
+
+<body>
+  <div class="main-container">
+    <div class="main-container__logo"><img src="images/logo.svg"></div>
+    <article class="calc">
+      <div class="calc__input">
+        <div>
+          <p class="calc__input__bill-label label">Bill</p>
+          <input class="calc__input__bill-textbox textbox" name="bill-input" placeholder="0">
+        </div>
+        <div>
+          <p class="calc__input__select-tip__label-main label" for="tip-input">Select Tip %</p>
+          <div class="calc__input__select-tip__container">
+            <div>
+              <input class="calc__input__select-tip__choice choice" id="5%" name="tip-choice" type="radio">
+              <label class="calc__input__select-tip__label choice-label" for="5%">5%</label>
+            </div>
+            <div>
+              <input class="calc__input__select-tip__choice choice" id="10%" name="tip-choice" type="radio">
+              <label class="calc__input__select-tip__label choice-label" for="10%">10%</label>
+            </div>
+            <div>
+              <input class="calc__input__select-tip__choice choice" id="15%" name="tip-choice" type="radio">
+              <label class="calc__input__select-tip__label choice-label" for="15%">15%</label>
+            </div>
+            <div>
+              <input class="calc__input__select-tip__choice choice" id="25%" name="tip-choice" type="radio">
+              <label class="calc__input__select-tip__label choice-label" for="25%">25%</label>
+            </div>
+            <div>
+              <input class="calc__input__select-tip__choice choice" id="50%" name="tip-choice" type="radio">
+              <label class="calc__input__select-tip__label choice-label" for="50%">50%</label>
+            </div>
+            <div>
+              <input class="calc__input__select-tip__choice choice" id="custom" name="tip-choice" type="radio">
+              <label class="calc__input__select-tip__label choice-label" for="custom"><input type="text"
+                  placeholder="Custom"></label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="calc__input__num-label label">Number of People</p>
+          <input class="calc__input__num-textbox textbox" name="bill-input" placeholder="0">
+        </div>
+      </div>
+      <div class="calc__output">
+        <div>
+          <p>Tip Amount<br><span>/ person</span></p>
+          <h1>$0.00</h1>
+        </div>
+        <div>
+          <p>Total<br><span>/ person</span></p>
+          <h1>$0.00</h1>
+        </div>
+        <button>RESET</button>
+      </div>
+    </article>
+  </div>
+</body>
+
+</html>
